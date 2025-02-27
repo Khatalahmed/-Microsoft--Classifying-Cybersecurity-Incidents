@@ -145,6 +145,6 @@ print("Predicted Class:", prediction)
 ## 👥 Contributors
 | Name | Role |
 |------|------|
-| 🧑‍💻 [Your Name] | Data Scientist & ML Engineer |
-| 👨‍💻 [Contributor Name] | Data Engineer |
+| 🧑‍💻 [Khatalahmed] | Data Scientist & ML Engineer |
+
 
