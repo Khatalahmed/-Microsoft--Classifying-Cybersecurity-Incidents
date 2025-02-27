@@ -61,3 +61,90 @@ The **Random Forest** model was selected as the best model based on its **Macro-
     'bootstrap': False,
     'max_features': 'sqrt'
 }
+## 📊 Training Results
+### Classification Report (Training Data)
+```markdown
+              precision    recall  f1-score   support
+           0       0.71      0.71      0.71    604084
+           1       0.51      0.50      0.50    288708
+           2       0.69      0.68      0.69    423067
+
+    accuracy                           0.66   1315859
+   macro avg       0.63      0.63      0.63   1315859
+weighted avg       0.66      0.66      0.66   1315859
+```
+
+### Confusion Matrix (Training Data)
+```lua
+[[431134  99401  73549]
+ [ 89041 144874  54793]
+ [ 91049  42554 289464]]
+```
+
+---
+
+## 📊 Test Results (Cost-Sensitive Evaluation)
+After applying **cost-sensitive learning**, the model was evaluated on **test data**.
+
+### Classification Report (Test Data)
+```markdown
+              precision    recall  f1-score   support
+           0       0.68      0.73      0.70   1630942
+           1       0.47      0.46      0.46    868897
+           2       0.73      0.67      0.70   1422856
+
+    accuracy                           0.65   3922695
+   macro avg       0.62      0.62      0.62   3922695
+weighted avg       0.65      0.65      0.65   3922695
+```
+
+### Confusion Matrix (Test Data)
+```lua
+[[1187031  279058  164853]
+ [ 276578  398375  193944]
+ [ 290559  173536  958761]]
+```
+
+### Additional Test Metrics
+- **Macro-F1 Score:** `0.62`
+- **Macro Precision:** `0.62`
+- **Macro Recall:** `0.62`
+
+---
+
+## 🚀 How to Use This Model
+
+### 1️⃣ Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+### 2️⃣ Load the model in Python:
+```python
+import joblib
+model = joblib.load("rf_optimized_optuna.joblib")
+```
+
+### 3️⃣ Predict cybersecurity incidents:
+```python
+sample_input = [...]  # Replace with actual input features
+prediction = model.predict(sample_input)
+print("Predicted Class:", prediction)
+```
+
+---
+
+## 🔮 Future Improvements
+✅ **Feature Engineering:** Introduce new features for better classification.  
+✅ **Hyperparameter Optimization:** Further fine-tune model parameters.  
+✅ **Deep Learning Integration:** Explore neural networks for complex patterns.  
+✅ **Real-time Deployment:** Implement the model in a production environment.  
+
+---
+
+## 👥 Contributors
+| Name | Role |
+|------|------|
+| 🧑‍💻 [Your Name] | Data Scientist & ML Engineer |
+| 👨‍💻 [Contributor Name] | Data Engineer |
+
